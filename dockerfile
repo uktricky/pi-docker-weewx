@@ -16,4 +16,5 @@ RUN apt-get update -y && apt-get install -y  --no-install-recommends \
 RUN pip install RPi.bme280
 COPY src/*  /docker-entrypoint.d/
 VOLUME ["/home/weewx/config"]
+
 EXPOSE 80/tcp
