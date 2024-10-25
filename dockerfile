@@ -1,7 +1,7 @@
 FROM nginx
 LABEL maintainer="uktricky"
 ENV WVERSION="weewx-5.1.0" 
-ENV WSOURCE="http://weewx.com/downloads/$WVERSION.tar.gz"
+ENV WSOURCE="http://weewx.com/downloads/$WVERSION.tgz"
 ENV PATH "$PATH:/home/weewx/bin"
 WORKDIR /home/weewx
 RUN apt-get update -y && apt-get install -y  --no-install-recommends \
