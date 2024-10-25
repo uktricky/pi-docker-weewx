@@ -1,6 +1,6 @@
 FROM nginx
 LABEL maintainer="uktricky"
-ENV WVERSION="weewx-4.8.0" 
+ENV WVERSION="weewx-5.1.0" 
 ENV WSOURCE="http://weewx.com/downloads/$WVERSION.tar.gz"
 ENV PATH "$PATH:/home/weewx/bin"
 WORKDIR /home/weewx
