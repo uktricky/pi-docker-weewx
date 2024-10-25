@@ -10,8 +10,8 @@ RUN apt-get update -y && apt-get install -y  --no-install-recommends \
 	python3-ephem usbutils ftp curl wget busybox-syslogd procps gnupg \
 	python3-smbus i2c-tools rtl-sdr rtl-433 && \
 	apt-get autoremove && \
-	wget $WSOURCE && tar xzvf $WVERSION.tar.gz --strip-components=1 && \
-	rm -rf /var/lib/apt/lists/* $WVERSION.tar.gz && \
+	wget $WSOURCE && tar xzvf $WVERSION.tgz --strip-components=1 && \
+	rm -rf /var/lib/apt/lists/* $WVERSION.tgz && \
 	mkdir public_html
 RUN pip install RPi.bme280
 COPY src/*  /docker-entrypoint.d/
