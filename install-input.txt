@@ -1,0 +1,10 @@
+DESC
+0, foot
+90.0
+90.0
+n
+us
+6
+serial
+/dev/ttyUSB0
+n
