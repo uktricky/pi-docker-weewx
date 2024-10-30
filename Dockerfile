@@ -13,7 +13,7 @@ ENV PATH=/usr/bin:$PATH
 #    &&  apt-get install curl bash python3 python3-dev python3-pip python3-venv gcc libc-dev libffi-dev tzdata rsync openssh-client openssl git -y
 
 RUN apt-get update \
-    &&  apt-get install wget unzip python3 python3-dev python3-pip python3-venv tzdata rsync openssh-client openssl git libffi-dev python3-setuptools libjpeg-dev -y \
+    &&  apt-get install wget unzip python3 python3-dev python3-pip python3-venv tzdata rsync openssh-client openssl git libffi-dev python3-setuptools libjpeg-dev python3-six -y \
     &&  addgroup weewx \
     && useradd -m -g weewx weewx \
     && chown -R weewx:weewx /home/weewx \
@@ -28,6 +28,7 @@ RUN python3 -m venv /home/weewx/weewx-venv \
     && python3 -m pip install CT3 \
     && python3 -m pip install configobj \
     && python3 -m pip install paho-mqtt \
+    && python3 -m pip install six \
     # If your hardware uses a serial port
     && python3 -m pip install pyserial \
     # If your hardware uses a USB port
