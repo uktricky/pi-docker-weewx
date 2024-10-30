@@ -67,7 +67,8 @@ RUN cd /var/tmp \
   && python3 ~/weewx/src/weectl.py extension install -y . \
   && cd /var/tmp \
   && rm -rf weewx-mqtt.zip weewx-mqtt-master
-#
+
+COPY weewx-data/* /home/weewx/ 
 
 ADD ./bin/run.sh $WEEWX_ROOT/bin/run.sh
 CMD ["sh", "-c", "$WEEWX_ROOT/bin/run.sh"]
