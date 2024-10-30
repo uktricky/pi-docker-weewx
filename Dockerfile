@@ -70,7 +70,5 @@ RUN cd /var/tmp \
 #
 
 ADD ./bin/run.sh $WEEWX_ROOT/bin/run.sh
-
 CMD ["sh", "-c", "$WEEWX_ROOT/bin/run.sh"]
-
 WORKDIR $WEEWX_ROOT
