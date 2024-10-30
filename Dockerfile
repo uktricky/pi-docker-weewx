@@ -1,4 +1,4 @@
-÷FROM debian:bookworm-slim
+FROM debian:bookworm-slim
 
 # Stolen from docker-weewx
 LABEL maintainer="Richard Town <rick@tricky.me.uk>"
