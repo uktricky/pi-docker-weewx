@@ -69,20 +69,8 @@ RUN cd /var/tmp \
   && cd /var/tmp \
   && rm -rf weewx-mqtt.zip weewx-mqtt-master
 
-## SKIN copy .... 
-RUN cd /var/tmp \
-  && wget -O weewx-skin.zip https://github.com/seehase/neowx-material/archive/refs/heads/master.zip \
-  && unzip weewx-skin.zip \
-  && cd neowx-material-master \
-  && cp -r src /home/weewx/weewx-data/skins/src \
-  && mv /home/weewx/weewx-data/skins/src /home/weewx/weewx-data/skins/neowx-material \
-  && cp bin/user/historygenerator.py /home/weewx/weewx-data/bin/user/historygenerator.py \
-  && cd /var/tmp \
-  && rm -rf weewx-skin.zip neowx-material-master
-
 COPY weewx-data/* /home/weewx/ 
 
 ADD ./bin/run.sh $WEEWX_ROOT/bin/run.sh
 CMD ["sh", "-c", "$WEEWX_ROOT/bin/run.sh"]
 WORKDIR $WEEWX_ROOT
-
