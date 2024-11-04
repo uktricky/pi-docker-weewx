@@ -80,7 +80,7 @@ RUN cd /var/tmp \
   && cd /var/tmp \
   && rm -rf weewx-skin.zip neowx-material-master
 
-COPY weewx-data/* /home/weewx/ 
+# COPY weewx-data/* /home/weewx/ 
 
 ADD ./bin/run.sh $WEEWX_ROOT/bin/run.sh
 CMD ["sh", "-c", "$WEEWX_ROOT/bin/run.sh"]
