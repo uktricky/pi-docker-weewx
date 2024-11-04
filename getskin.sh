@@ -22,6 +22,16 @@ cp bin/user/historygenerator.py $DEST/usrbin/historygenerator.py
 cd /var/tmp
 rm -rf weewx-skin.zip neowx-material-master
 
+
+# Tricky Configuration of skin
+
+
+## Get the gw1000 driver
+cd /var/tmp
+git clone https://github.com/gjr80/weewx-gw1000.git
+cp weewx-gw1000/bin/user/gw1000.py $DEST/usrbin/gw1000.py
+rm -rf weewx-gw1000
+
 exit
 
 
