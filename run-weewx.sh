@@ -12,6 +12,7 @@ docker run \
 -v /home/tricky/docker/weewx/db:/home/weewx/weewx-data/archive \
 -v /home/tricky/docker/webserver/:/home/weewx/weewx-data/public_html/ \
 -v /home/tricky/docker/weewx/usrbin/gw1000.py:/home/weewx/weewx-data/bin/user/gw1000.py \
+-v /home/tricky/docker/weewx/skins:/home/weewx/weewx-data/skins \
 --name weewx \
 tricky-weewx:latest
 
