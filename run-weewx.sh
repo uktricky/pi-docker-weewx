@@ -14,7 +14,10 @@ docker run \
 -v /home/tricky/docker/weewx/usrbin/gw1000.py:/home/weewx/weewx-data/bin/user/gw1000.py \
 -v /home/tricky/docker/weewx/skins:/home/weewx/weewx-data/skins \
 --name weewx \
-tricky-weewx:latest
+uktricky/weewx:latest
+
+
+#tricky-weewx:latest
 
 
 
